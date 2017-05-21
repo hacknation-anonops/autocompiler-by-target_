@@ -1,6 +1,9 @@
 #!/usr/bin/python
 import os
 import sys
+if os.geteuid() != 0:
+    print "This software must be run as root. Please try again with sudo."
+    sys.exit(0)
 print "Auto crosscompiler by target_\n"
 try:
     extra=sys.argv[3]
@@ -14,7 +17,7 @@ if len(sys.argv) < 2:
     exit(1)
 x=raw_input("Setup crosscompilers?\n(yes/no): ")
 def run():
-    os.system("source ~/.bashrc")
+    os.system("source /root/.bashrc")
     for arch in arches: 
         os.system(arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch)
 def compile():
