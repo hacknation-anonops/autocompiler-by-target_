@@ -23,7 +23,7 @@ def run():
         os.system(arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch)
 def paths():
     found=False
-    f=open("~/.bashrc", "a+")
+    f=open("/root/.bashrc", "a+")
     if """export PATH=$PATH:/etc/xcompile/armv4l/bin
 export PATH=$PATH:/etc/xcompile/armv6l/bin
 export PATH=$PATH:/etc/xcompile/i586/bin
