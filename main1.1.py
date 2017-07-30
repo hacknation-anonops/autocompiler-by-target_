@@ -26,7 +26,7 @@ def setup():
         os.system("mkdir /etc/xcompile")
 	for arch in arches:
 	    os.system("wget https://www.uclibc.org/downloads/binaries/0.9.30.1/cross-compiler-"+arch+".tar.bz2 -P /etc/xcompile/")
-            os.system("tar -jxf /etc/xcompile/cross-compiler-"+arch+".tar.bz2")
+            os.system("tar -jxf /etc/xcompile/cross-compiler-"+arch+".tar.bz2 -C /etc/xcompile/")
 	    os.system("mv /etc/xcompile/cross-compiler-"+arch+" /etc/xcompile/"+arch)
 	os.system("rm /etc/xcompile/*.tar.bz2")
 
