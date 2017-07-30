@@ -30,13 +30,10 @@ def setup(): #setup the compilers
 	    os.system("mv /etc/xcompile/cross-compiler-"+arch+" /etc/xcompile/"+arch)
 	os.system("rm /etc/xcompile/*.tar.bz2")
 
-    for arch in arches:
-	os.system("export PATH=$PATH:/etc/xcompile/"+arch+"/bin")
-
 def main():
     setup()
     for arch in arches: 
-        os.system(arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch) #compile line
+        os.system("/etc/xcompile/"+arch+"/bin/"+arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch) #compile line
 
 if __name__ == "__main__":
     main()
