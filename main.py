@@ -2,11 +2,14 @@
 import os
 import sys
 
+version="2.1.1"
+
 if os.geteuid() != 0: # check if we run as root
     print "This software must be run as root. Please try again with sudo."
     exit()
 
 print "Auto crosscompiler by target_\n"
+print "Version: "+version
 
 try: # handle extra args
     extra=" ".join(sys.argv[3:])
