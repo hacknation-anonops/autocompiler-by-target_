@@ -19,7 +19,7 @@ except:
 arches=["mips","mipsel","powerpc","sh4","m68k","armv4l"] #dont fuck with these!
 
 if len(sys.argv) < 2:
-    print "Usage: "+sys.argv[0]+" <program.c> <output-name> <extra options(ex: -pthread)>"
+    print "Usage: "+sys.argv[0]+" <program.c> <path> <extra options(ex: -pthread)>"
     exit()
 
 def setup(): #setup the compilers
