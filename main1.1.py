@@ -19,7 +19,7 @@ if len(sys.argv) < 2:
     print "Usage: "+sys.argv[0]+" <program.c> <output-name> <extra options(ex: -pthread)>"
     exit()
 
-def setup():
+def setup(): #setup the compilers
     setup=raw_input("Setup crosscompilers?\n(yes/no): ")
 	
     if setup == "yes":
@@ -36,7 +36,7 @@ def setup():
 def main():
     setup()
     for arch in arches: 
-        os.system(arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch)
+        os.system(arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch) #compile line
 
 if __name__ == "__main__":
     main()
