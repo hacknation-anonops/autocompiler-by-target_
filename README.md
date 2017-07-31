@@ -1,4 +1,13 @@
-<h1>Auto cross-compiler</h1>
-</hr>
+# Auto cross-compiler
 
-Cross compile any C file for embedded devices like mips, powerpc, m68k etc.
+## Introduction
+
+> Cross compile any C file for embedded devices like mips, powerpc, m68k etc.
+
+## Example
+
+> $ autocompile script.c script - will output a file for each arch: script-mips, script-m68k etc.
+
+## Installation
+
+> $ python install.py install/uninstall
