@@ -36,7 +36,7 @@ def setup(): #setup the compilers
 def main():
     setup()
     for arch in arches: 
-        os.system("/etc/xcompile/"+arch+"/bin/"+arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch) #compile line
+        os.system("/etc/xcompile/"+arch+"/bin/"+arch+"-gcc "+sys.argv[1]+" "+extra+" -o "+sys.argv[2]+"-"+arch) #compile da shit
 
 if __name__ == "__main__":
     main()
